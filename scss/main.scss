@@ -1,0 +1,117 @@
+@import 'config';
+@import 'sections';
+
+// *{
+//      box-sizing: border-box;
+//      padding: 0;
+//      margin: 0;
+// }
+
+body{
+    font-family: $font-stack;
+}
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    display: none;
+    background-color: rgba(255,255,255,0.9);
+    .navbar-brand{
+        font-family: 'Walter Turncoat', cursive;
+        background-color: #fff;
+        padding: 5px;
+        border: solid 2px; 
+        color: #000;
+        border-radius: 10px;
+    }
+    
+    .mr-auto{
+        flex:1;
+        justify-content: flex-end;
+    }
+
+}
+
+.first-container{
+    border: 1px solid rgba(0,0,0,0);
+    #bienvenue{
+        background-color:#fff;
+        font-size:80px;
+        font-family: 'Satisfy', cursive;
+        color: $primary-color;
+        display: inline-flex;
+        position: absolute;
+        left: 42%;
+        top:150px;
+        //margin-top: 250px;
+        border: solid 2px $primary-color;
+        border-radius: 50px;
+        padding: 6px;
+        
+        &:hover{
+            text-decoration: none;
+            color:$secondary-color;
+            border: solid 2px $secondary-color;
+        }
+
+        .goTo{
+            transform: translate3d(0,100%,0);
+        }
+    }
+}
+
+#decouvrir{
+    height: 20vh;
+    background:#fff;
+    text-align:center;
+    font-family: 'Satisfy', cursive;
+    padding: 2rem;
+}
+
+#contact{
+    height: 70vh;
+    background:#fff;
+}
+
+// .showcase{
+//     position: fixed;
+//     width:100%;
+//     top:0;
+//     background-color: rgba(10,10,10,0.1);
+//     height: 50px;
+//     border-bottom: 1px solid #fff;
+
+//     nav{
+//         display:flex;
+//         align-items: center;
+//         justify-content:space-between; 
+
+//         ul{
+//             display: flex;
+//             list-style: none;
+//         }
+
+//         li{
+//             padding:15px;
+//         }
+//         a:hover{
+//             color: $secondary-color;
+//             border: solid 2px $secondary-color; 
+//         }
+//     }
+//     a{
+//         background-color: #fff;
+//         padding: 5px;
+//         border: solid 2px $primary-color; 
+//         color: $primary-color;
+//         border-radius: 10px;
+//     }
+// }
+
+// .nav-container{
+//     max-width: 1500px;
+//     padding: 0 30px;
+//     margin: 0 auto;
+//     overflow: auto;
+// }
