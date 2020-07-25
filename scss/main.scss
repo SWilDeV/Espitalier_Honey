@@ -1,11 +1,9 @@
 @import 'config';
 @import 'sections';
 
-// *{
-//      box-sizing: border-box;
-//      padding: 0;
-//      margin: 0;
-// }
+*{
+     box-sizing: border-box;
+}
 
 body{
     font-family: $font-stack;
@@ -14,9 +12,12 @@ a{
     text-decoration: none;
 }
 
+
+
 .navbar{
     display: none;
     background-color: rgba(255,255,255,0.9);
+    
     .navbar-brand{
         font-family: 'Walter Turncoat', cursive;
         background-color: #fff;
@@ -30,38 +31,66 @@ a{
         flex:1;
         justify-content: flex-end;
     }
-
+    .nav-link{
+        color:$primary-color;
+    }
 }
 
-.first-container{
-    border: 1px solid rgba(0,0,0,0);
-    #bienvenue{
-        background-color:#fff;
-        font-size:80px;
-        font-family: 'Satisfy', cursive;
-        color: $primary-color;
-        display: inline-flex;
-        position: absolute;
-        left: 42%;
-        top:150px;
-        //margin-top: 250px;
-        border: solid 2px $primary-color;
-        border-radius: 50px;
-        padding: 6px;
-        
-        &:hover{
-            text-decoration: none;
-            color:$secondary-color;
-            border: solid 2px $secondary-color;
-        }
+.welcome-container{
 
-        .goTo{
-            transform: translate3d(0,100%,0);
+    img{
+        height:50px;
+        border-radius:300px;
+    }
+
+    @include easeOut;
+    border: 1px solid rgba(0,0,0,0);//correction d'un bug au top
+    display: inline-flex;
+    position: absolute;
+    left: 42%;
+    top:280px;
+    border: solid 2px $primary-color;
+    border-radius: 100px;
+    padding: 10px 10px 0px 10px;
+    background-color:#fff;
+    
+
+    #welcome-text{
+        
+        @include easeOut;
+        // line-height: 0px;
+        // height: 0px;
+        font-size:50px;
+        font-family: 'Satisfy', cursive;
+        color: $primary-color; 
+        text-decoration: none;       
+        //margin-top:100px;
+    }
+    &:hover{
+        text-decoration: none;
+        border: solid 2px $secondary-color;
+        #welcome-text{
+            color:$secondary-color;
         }
     }
 }
 
-#decouvrir{
+.carousel  {
+    &-item{
+        height: 580px;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 300px;
+        }
+    }
+}
+  
+
+//discover section
+#discover-section{
     height: 20vh;
     background:#fff;
     text-align:center;
@@ -69,9 +98,54 @@ a{
     padding: 2rem;
 }
 
-#contact{
-    height: 70vh;
+//Contact
+#contact-section{
+    margin-top:50px;
     background:#fff;
+
+    .contact-container{
+        font-family: 'Satisfy', cursive;
+        display: inline-block;
+        //flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: left;
+        margin-top: 1rem;
+
+        .contact-info{
+            color: $secondary-color;
+        }
+
+        .lg-heading{
+            margin-bottom: 2rem;
+        }
+        
+        .boxes{
+            div{
+                @include easeOut;
+                font-size: 2rem;
+                border: 3px $primary-color solid;
+                border-radius: 10px;
+                padding: 1rem 1.5rem;
+                margin-bottom: 2rem;
+                
+                &:hover{
+                    background: $secondary-color;
+                    color: #fff;
+                    .text-sec{
+                        color:$primary-color;
+                    }  
+                 }
+            }
+        }
+    }
+}
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    //color: set-text-color($primary-color);
+    height: 60px;
 }
 
 // .showcase{

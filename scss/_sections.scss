@@ -1,19 +1,21 @@
-#first-img{
+#welcome-section{
     height: 100vh;
     background: url(../img/alexander-mils-nesUgwNX3u4-unsplash.jpg);
     background-size: cover;
 }
 
-#second-img{
+#second-sec{
     height: 80vh;
-    background: url(../img/revolt-QJfew6cDpR4-unsplash-crop.jpg);
+    //background: url(../img/revolt-QJfew6cDpR4-unsplash-crop.jpg);
     background-size: cover;
 }
 
-
-
-#third-img{
+#third-sec{
     height: 100vh;
     background: url(../img/chinh-le-duc-q98J_eiecHA-unsplash.jpg);
     background-size: cover;
+}
+
+#contact-section{
+    height: 70vh;
 }
