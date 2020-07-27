@@ -12,11 +12,9 @@ a{
     text-decoration: none;
 }
 
-
-
 .navbar{
     display: none;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     
     .navbar-brand{
         font-family: 'Walter Turncoat', cursive;
@@ -75,23 +73,26 @@ a{
     }
 }
 
-.carousel  {
-    &-item{
-        height: 580px;
-
-        img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-height: 300px;
+#carousel-sec{
+    //display:flex;
+    .carousel{
+        &-item{
+            height: 580px;
+    
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-height: 300px;
+            }
         }
     }
+    
 }
   
 
-//discover section
-#discover-section{
-    height: 20vh;
+//description section
+.description-container{
     background:#fff;
     text-align:center;
     font-family: 'Satisfy', cursive;
@@ -102,12 +103,15 @@ a{
 #contact-section{
     margin-top:50px;
     background:#fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     .contact-container{
         font-family: 'Satisfy', cursive;
         display: inline-block;
         //flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: left;
         margin-top: 1rem;
 
@@ -119,23 +123,41 @@ a{
             margin-bottom: 2rem;
         }
         
-        .boxes{
-            div{
-                @include easeOut;
-                font-size: 2rem;
-                border: 3px $primary-color solid;
-                border-radius: 10px;
-                padding: 1rem 1.5rem;
-                margin-bottom: 2rem;
-                
-                &:hover{
-                    background: $secondary-color;
-                    color: #fff;
-                    .text-sec{
-                        color:$primary-color;
-                    }  
-                 }
+        .contact-id{
+            @include easeOut;
+            font-size: 2rem;
+            border: 3px $primary-color solid;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            
+            &:hover{
+                background: $secondary-color;
+                color: #fff;
+                .text-sec{
+                    color:$primary-color;
+                }  
+                .contact-info{
+                    color: #000;
+                }
             }
+        }
+    }
+    //Google map
+    .map-container{
+        margin-right: 20vh;
+        padding-bottom: 10vh;
+        width:100vh;
+        border-radius: 10px;
+        overflow:hidden;
+        position:relative;
+        
+        iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:relative;
         }
     }
 }
@@ -148,44 +170,5 @@ a{
     height: 60px;
 }
 
-// .showcase{
-//     position: fixed;
-//     width:100%;
-//     top:0;
-//     background-color: rgba(10,10,10,0.1);
-//     height: 50px;
-//     border-bottom: 1px solid #fff;
 
-//     nav{
-//         display:flex;
-//         align-items: center;
-//         justify-content:space-between; 
-
-//         ul{
-//             display: flex;
-//             list-style: none;
-//         }
-
-//         li{
-//             padding:15px;
-//         }
-//         a:hover{
-//             color: $secondary-color;
-//             border: solid 2px $secondary-color; 
-//         }
-//     }
-//     a{
-//         background-color: #fff;
-//         padding: 5px;
-//         border: solid 2px $primary-color; 
-//         color: $primary-color;
-//         border-radius: 10px;
-//     }
-// }
-
-// .nav-container{
-//     max-width: 1500px;
-//     padding: 0 30px;
-//     margin: 0 auto;
-//     overflow: auto;
-// }
+@import 'mobile';
